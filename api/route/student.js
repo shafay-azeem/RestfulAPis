@@ -64,7 +64,7 @@ router.get("/getstudentbyid/:id", (req, res, next) => {
   Student.findById(req.params.id)
     .then((result) => {
       res.status(200).json({
-        student: result,
+        studentData: result,
       });
     })
     .catch((err) => {
